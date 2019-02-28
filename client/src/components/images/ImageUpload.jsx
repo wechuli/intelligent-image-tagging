@@ -6,7 +6,7 @@ class ImageUpload extends Component {
     super(props);
     this.state = {
       file: null,
-      fileName:'No Image Selected'
+      fileName:null
     };
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -34,8 +34,10 @@ class ImageUpload extends Component {
 
   render() {
     return (
-      <div className="file has-name is-boxed">
-        <form onSubmit={this.onFormSubmit}>
+        <div className="columns is-centered">
+        <div className="column  is-half">
+        <div className="file has-name is-boxed is-centered">
+        <form style={{width:'300px'}} onSubmit={this.onFormSubmit}>
           <label className="file-label">
             <input
               className="file-input"
@@ -43,23 +45,29 @@ class ImageUpload extends Component {
               name="photo"
               onChange={this.onChange}
             />
-            <h1 className="subtitle">File Upload</h1>
-            <span class="file-cta">
+        
+            <span className="file-cta">
               <span className="file-icon">
                 <i className="fas fa-upload" />
               </span>
               <span className="file-label">Choose an Image</span>
             </span>
             <span className="file-name has-text-centered">
-            {this.state.fileName}
+            {this.state.fileName ? (<span className="has-text-primary">{this.state.fileName}</span>):(<span className="has-text-danger">No File Selected</span>)}
             </span>
-
-            <button className="button" type="submit">
+            {this.state.fileName ?( <button className="button m-t-md is-primary is-outlined is-rounded" type="submit">
               Upload
-            </button>
+            </button>):( <button className="button m-t-md is-primary is-outlined is-rounded" type="submit" disabled>
+              Upload
+            </button>)}
+
+           
           </label>
         </form>
       </div>
+        </div>
+        </div>
+      
     );
   }
 }

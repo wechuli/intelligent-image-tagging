@@ -9,7 +9,7 @@ const Tab = () => {
           <ul>
             <li className="is-active">
               <Link to='/'>
-                <span class="icon is-small">
+                <span className="icon is-small">
                   <i className="fas fa-image" />
                 </span>
                 <span>All Pictures</span>
