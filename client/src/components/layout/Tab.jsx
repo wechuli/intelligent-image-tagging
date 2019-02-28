@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 
 const Tab = () => {
   return (
@@ -7,21 +7,21 @@ const Tab = () => {
       <div className="column is-half ">
         <div className="tabs is-toogle is-toggle is-toggle-rounded is-centered">
           <ul>
-            <li className="is-active">
-              <Link to='/'>
+            <li >
+              <NavLink to='/all' activeClassName="has-background-info">
                 <span className="icon is-small">
                   <i className="fas fa-image" />
                 </span>
                 <span>All Pictures</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='/upload'>
+              <NavLink to='/upload' activeClassName="has-background-info">
                 <span className="icon is-small">
                   <i className="fas fa-cloud-upload-alt" />
                 </span>
                 <span>Upload Image</span>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

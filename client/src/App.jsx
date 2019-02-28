@@ -12,10 +12,9 @@ const App = () => {
       <div className="container">
         <Tab />
         <Switch>
-          <Route exact path='/' component={Images}/>
-          <Route exact path='/upload' component={ImageUpload}/>
-
-          </Switch>
+          <Route exact path="/upload" component={ImageUpload} />
+          <Route exact path="/all" component={Images} />
+        </Switch>
       </div>
     </React.Fragment>
   );
