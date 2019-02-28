@@ -1,0 +1,5 @@
+Capabilities
+ 	-Allow Image upload to Azure Storage Account -Blobs
+	-Allow viewing of all images on the site
+	-If a single image is selected, popup a full screen modal with the image along with the AI generated descriptions and tags
+	-Explore the use of Azure Functions to offload AI identification of the images from the server
