@@ -8,6 +8,18 @@ const ImageFullSize = props => {
   const closeModal = () => {
     setStatus("");
   };
+  const tagColors = [
+    "black",
+    "success",
+    "danger",
+    "dark",
+    "light",
+    "primary",
+    "link",
+    "info",
+    "white",
+    "warning"
+  ];
   return (
     <React.Fragment>
       <div
@@ -41,9 +53,31 @@ const ImageFullSize = props => {
             className="has-background-light content"
           >
             <img src={props.url} alt={props.description} />
-            <p>This is a paragraph</p>
+            <h2 className="subtitle">Description</h2>
+            <p className="box">{props.description}</p>
+            <h2 className="subtitle">Tags</h2>
+            <p className="box">
+              {props.tags ? (
+                tagColors.map((color, index) => {
+                  return (
+                    <span
+                      style={{ marginRight: "3px" }}
+                      key={index}
+                      className={`tag is-${color}`}
+                    >
+                      {props.tags[index] ? (
+                        props.tags[index]
+                      ) : (
+                        <div>There are no tags for this image</div>
+                      )}
+                    </span>
+                  );
+                })
+              ) : (
+                <div>No tags available</div>
+              )}
+            </p>
           </div>
-
         </div>
         <button
           onClick={closeModal}
