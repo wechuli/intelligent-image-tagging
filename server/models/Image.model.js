@@ -12,7 +12,13 @@ const photoSchema = new Schema({
   blobType: String,
   size: String,
   etag: String,
-  url: String
+  url: String,
+  adult_content:Boolean,
+  tags:[String],
+  description:String,
+  width:Number,
+  height:Number,
+  format:String
 });
 
 module.exports = mongoose.model("photos", photoSchema);
