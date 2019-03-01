@@ -46,6 +46,8 @@ module.exports = {
               allData.adult_content = result.data.adult.isAdultContent;
               allData.tags = result.data.description.tags;
               allData.description = result.data.description.captions[0].text;
+              allData.description_confidence = result.data.description.captions[0].confidence;
+
               allData.width = result.data.metadata.width;
               allData.height = result.data.metadata.height;
               allData.format = result.data.metadata.format;
