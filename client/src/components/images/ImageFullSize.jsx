@@ -28,8 +28,12 @@ const ImageFullSize = props => {
         onClick={openModal}
       >
         <div className="card-image">
-          <figure className="image is-4by3">
-            <img src={props.url} alt={`${props.description} image`} />
+          <figure className="image">
+            <img
+              style={{ maxheight: "100%", maxWidth: "100%" }}
+              src={props.url}
+              alt={`${props.description} image`}
+            />
           </figure>
         </div>
         <div className="card-content">
@@ -55,8 +59,9 @@ const ImageFullSize = props => {
             <img src={props.url} alt={props.description} />
             <h2 className="subtitle">Description</h2>
             <p className="box">{props.description}</p>
+
             <h2 className="subtitle">Tags</h2>
-            <p className="box">
+            <div className="box">
               {props.tags ? (
                 tagColors.map((color, index) => {
                   return (
@@ -68,13 +73,25 @@ const ImageFullSize = props => {
                       {props.tags[index] ? (
                         props.tags[index]
                       ) : (
-                        <div>There are no tags for this image</div>
+                        <p>There are no tags for this image</p>
                       )}
                     </span>
                   );
                 })
               ) : (
-                <div>No tags available</div>
+                <p>No tags available</p>
+              )}
+            </div>
+            <h2 className="subtitle">Confidence Score</h2>
+            <p className="box">
+              {props.description_confidence ? (
+                <progress
+                  className="progress is-primary"
+                  value={props.description_confidence}
+                  max="1"
+                />
+              ) : (
+                <p>Confidence Score Unaivalable</p>
               )}
             </p>
           </div>
