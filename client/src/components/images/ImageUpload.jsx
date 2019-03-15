@@ -21,7 +21,7 @@ class ImageUpload extends Component {
       }
     };
     axios
-      .post("http://localhost:8090/api/upload", formData, config)
+      .post("https://intelisense-image.azurewebsites.net/api/upload", formData, config)
       .then(response => {
         alert("The file is successfully uploaded");
       })

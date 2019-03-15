@@ -7,7 +7,7 @@ const Images = props => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8090/api/all")
+      .get("https://intelisense-image.azurewebsites.net/api/all")
       .then(response => {
         setImages(response.data);
       })
