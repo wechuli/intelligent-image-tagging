@@ -14,6 +14,7 @@ const App = () => {
         <Switch>
           <Route exact path="/upload" component={ImageUpload} />
           <Route exact path="/all" component={Images} />
+          <Route exact path="/" component={Images} />
         </Switch>
       </div>
     </React.Fragment>
