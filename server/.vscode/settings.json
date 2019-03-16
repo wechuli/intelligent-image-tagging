@@ -2,6 +2,5 @@
     "appService.zipIgnorePattern": [
         ".vscode{,/**}"
     ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/86856efa-f11f-41e1-b3eb-080cceee704e/resourceGroups/IoTLabResources/providers/Microsoft.Web/sites/intelisense-image",
     "appService.deploySubpath": ""
 }
