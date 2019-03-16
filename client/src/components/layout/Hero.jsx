@@ -8,8 +8,7 @@ const Hero = () => {
           <div className="container has-text-centered">
             <h1 className="title">Analyse Images with ML</h1>
             <h2 className="subtitle">
-              Upload an image and the AI will attempt to describe it, or just
-              view what has already been uploaded and enjoy. Click on an image to expand it.
+              Browse through the gallery and click on a picture to view it full size along with additional info from the AI. You can upload you own image and view it in the 'All Pictures' section. Be patient while the image gets uploaded.
             </h2>
 
           </div>
