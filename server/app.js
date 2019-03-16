@@ -1,12 +1,12 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const env = require("dotenv").load(); //Use the .env file to load the variables
+const express = require("express"),
+ bodyParser = require("body-parser"),
+ morgan = require("morgan"),
+ helmet = require("helmet"),
+ cors = require("cors"),
+ mongoose = require("mongoose"),
+ env = require("dotenv").load(), //Use the .env file to load the variables
 
-const mainRoute = require('./routes/mainRoutes');
+ mainRoute = require('./routes/mainRoutes');
 
 
 //Instantiate the express instance

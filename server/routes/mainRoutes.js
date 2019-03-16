@@ -1,8 +1,9 @@
-const express = require("express");
-const { uploadPhoto } = require("../controllers/uploadController");
-const { getall } = require("../controllers/ImageRetrievalController");
+const express = require("express"),
+ { uploadPhoto } = require("../controllers/uploadController"),
+ { getall } = require("../controllers/ImageRetrievalController"),
+ router = express.Router();
 
-const router = express.Router();
+ 
 
 router.post("/upload", uploadPhoto);
 router.get("/all", getall);
