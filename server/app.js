@@ -9,7 +9,6 @@ const env = require("dotenv").load(); //Use the .env file to load the variables
 const mainRoute = require('./routes/mainRoutes');
 
 
-
 //Instantiate the express instance
 
 

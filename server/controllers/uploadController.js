@@ -3,16 +3,17 @@ const path = require("path");
 const MulterAzureStorage = require("multer-azure-storage");
 const Image = require("../models/Image.model");
 const axios = require("axios");
+const env = require("dotenv").load();
 
 let headers = {
   "Content-Type": "application/json",
-  "Ocp-Apim-Subscription-Key": "9f971540da674e738faadd48b3d09199"
+  "Ocp-Apim-Subscription-Key": process.env.APPSETTING_AZURE_VISION_KEYS //change here to use your own keys
 };
 
 const upload = multer({
   storage: new MulterAzureStorage({
     azureStorageConnectionString:
-      "DefaultEndpointsProtocol=https;AccountName=mywebfiles;AccountKey=+I31TqHyJvsg36ixp0FVLyxTwBIw1PK0baI9LBiyVkfsCpYtaCiZecC5ft/Q7/8/V2+MaJtSEOgY19JGGeSDSw==;EndpointSuffix=core.windows.net",
+      process.env.APPSETTING_AZURE_STORAGE_ACCESS, //change here to use your own keys
     containerName: "photos",
     containerSecurity: "blob"
   }),
